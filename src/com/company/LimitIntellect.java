@@ -8,7 +8,7 @@ public class LimitIntellect extends Intellect {
 
     private int limit;
 
-    public LimitIntellect(int Limit) {
+    public LimitIntellect(int limit) {
         this.limit = limit;
     }
 
