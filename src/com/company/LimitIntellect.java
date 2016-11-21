@@ -12,6 +12,8 @@ public class LimitIntellect extends Intellect {
         this.limit = limit;
     }
 
+
+
     @Override
     public Command decide(int score) {
         if (score<limit)

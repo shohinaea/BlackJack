@@ -12,8 +12,16 @@ public class Card {
         this.value = value;
     }
 
+
+
     @Override
     public String toString() {
         return ""+value+" of "+suit;
+    }
+
+
+    public int getScore() {
+
+        return value.getScore();
     }
 }
