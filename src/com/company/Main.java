@@ -48,9 +48,9 @@ public class Main {
                     player.condition = Condition.DRAW;
                 else
                     player.condition = Condition.WIN;
-                System.out.println(player.name + " - "+player.hand+" : "+player.condition);
+                System.out.println(player.name + " - "+player.hand.getScore()+":"+player.hand+" : "+player.condition);
             }
-            else System.out.println(player.hand);
+            else System.out.println(player.name+" - "+player.hand.getScore()+":"+player.hand);
         }
 
 
