@@ -18,7 +18,7 @@ public class ConsoleStavtshik extends Stavtshik {
             if (balance-c>=0) {
                 return c;
             }
-            System.out.println("Not enough money");
+            System.out.println("Not enough money, try again");
 
         }
     }

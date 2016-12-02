@@ -15,7 +15,7 @@ public class LimitIntellect extends Intellect {
 
 
     @Override
-    public Command decide(int score) {
+    public Command decide(int score,int balance, int stavka) {
         if (score<limit)
             return Command.HIT;
         else

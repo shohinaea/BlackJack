@@ -10,8 +10,8 @@ public class Computer extends Player {
 
 
 
-    public Computer(Intellect intellect, String name) {
+    public Computer(Stavtshik stavtshik, Intellect intellect, String name) {
 
-        super(intellect, name);
+        super(stavtshik, intellect, name);
     }
 }

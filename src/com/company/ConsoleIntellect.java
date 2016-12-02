@@ -10,17 +10,23 @@ public class ConsoleIntellect extends Intellect {
 
 
     @Override
-    public Command decide(int score) {
+    public Command decide(int score,int balance, int stavka) {
         while (true) {
-            System.out.println("HIT/STAND? ");
+            System.out.println("HIT/STAND/DOUBLE? ");
             String c = in.nextLine();
             if ("hit".startsWith(c.toLowerCase()))
                 return Command.HIT;
 
             if ("stand".startsWith(c.toLowerCase()))
                 return Command.STAND;
+            if ("double".startsWith(c.toLowerCase())) {
+                if (balance-stavka>0)
+                return Command.DOUBLE;
+            }
 
-            System.out.println("Can't understand, please repeat");
+
+
+            System.out.println("You can't do it, please repeat");
         }
 
     }

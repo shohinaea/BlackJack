@@ -7,10 +7,12 @@ public class Dealer extends Computer {
     Deck deck = new Deck();
 
     public Dealer() {
-        super(new DealerIntellect(), "Dealer");
+        super(new EmptyStavtshik(),new DealerIntellect(), "Dealer");
     }
 
     public void deal(Player player) {
+        if(deck.isEmpty())
+            deck = new Deck();
         Card current = deck.pop();
         player.take(current);
     }

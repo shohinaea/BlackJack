@@ -16,9 +16,10 @@ public abstract class Player {
     private Stavtshik stavtshik;
 
 
-    public Player(Intellect intellect, String name) {
+    public Player(Stavtshik stavtshik,Intellect intellect, String name) {
         this.intellect = intellect;
         this.name = name;
+        this.stavtshik = stavtshik;
         this.balance = 500;
         this.stavka = 0;
     }
@@ -31,10 +32,14 @@ public abstract class Player {
         int score = hand.getScore();
         if (score > 21)
             return Command.STAND;
-        return intellect.decide(score);
+        return intellect.decide(score, balance, stavka);
     }
 
     public int stavka() {
+        if (balance == 0) {
+            condition = Condition.LOSS;
+            return 0;
+        }
         int stavka = stavtshik.decide(balance);
         balance -= stavka;
         return stavka;
