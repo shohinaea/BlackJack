@@ -139,7 +139,7 @@ public class Table {
     }
 
     public boolean isTableEmpty() {
-        if (players.size()==0) return true;
+        if (players.size()==1) return true;
         else return false;
     }
 }
